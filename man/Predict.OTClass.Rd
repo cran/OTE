@@ -4,19 +4,19 @@
 Prediction function for the object returned by \code{OTClass}
 }
 \description{
-This function provides prediction for test data on the trained \code{OTClass} object for classification. 
+This function provides prediction for test data on the trained \code{OTClass} object for classification.
 }
 \usage{
 Predict.OTClass(Opt.Trees, XTesting, YTesting)
 }
 \arguments{
-  \item{Opt.Trees}{ 
+  \item{Opt.Trees}{
 An object of class \code{OptTreesEns}.
 }
-  \item{XTesting}{  
-An \code{m x d} dimensional training data matrix/frame consiting of test observations where \code{m} is the number of observations and \code{d} is the number of features. 
+  \item{XTesting}{
+An \code{m x d} dimensional training data matrix/frame consiting of test observations where \code{m} is the number of observations and \code{d} is the number of features.
 }
-  \item{YTesting}{  
+  \item{YTesting}{
 Optional. A vector of length \code{m} consisting of class labels for the test data. Should be binary (0,1).
 }
 }
@@ -29,7 +29,7 @@ A list with values
  \item{Estimated.Class  }{A vector of length \code{m} consisting of the estimated class labels for the observations in XTesting.}
  }
 \references{
-Khan, Z., Gul, A., Perperoglou, A., Mahmoud, O.,Miftahuddin, M., Adler, W. and Lausen, B.(2014) ``An ensemble of optimal trees for classification and regression'' Journal name to appear.
+Khan, Z., Gul, A., Perperoglou, A., Miftahuddin, M., Mahmoud, O., Adler, W., & Lausen, B. (2019). Ensemble of optimal trees, random forest and random projection ensemble classification. Advances in Data Analysis and Classification, 1-20.
 
 Liaw, A. and Wiener, M. (2002) ``Classification and regression by random forest'' R news. 2(3). 18--22.
 }
@@ -44,24 +44,25 @@ Zardad Khan <zkhan@essex.ac.uk>
 
   data(Body)
   data <- Body
-  
+
 #Divide the data into training and test parts
 
-  set.seed(9123) 
+  set.seed(9123)
   n <- nrow(data)
   training <- sample(1:n,round(2*n/3))
   testing <- (1:n)[-training]
   X <- data[,1:24]
   Y <- data[,25]
-  
+
 #Train OTClass on the training data
 
-  Opt.Trees <- OTClass(XTraining=X[training,],YTraining = Y[training], t.initial=200)
-  
+  Opt.Trees <- OTClass(XTraining=X[training,],YTraining = Y[training],
+  t.initial=200, method="oob+independent")
+
 #Predict on test data
 
   Prediction <- Predict.OTClass(Opt.Trees, X[testing,],YTesting=Y[testing])
-  
+
 #Objects returned
 
   names(Prediction)
@@ -70,4 +71,4 @@ Zardad Khan <zkhan@essex.ac.uk>
 
 }
 \keyword{Predict.OTClass}
-\keyword{OptTreesEns}
+\keyword{OTE}

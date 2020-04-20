@@ -30,7 +30,7 @@ A list with values
  \item{Pr.Values  }{A vector of length \code{m} consisting of the estimated values for the response observations in XTesting}
 }
 \references{
-Khan, Z., Gul, A., Perperoglou, A., Mahmoud, O.,Miftahuddin, M., Adler, W. and Lausen, B.(2014) ``An ensemble of optimal trees for classification and regression'' Journal name to appear.
+Khan, Z., Gul, A., Perperoglou, A., Miftahuddin, M., Mahmoud, O., Adler, W., & Lausen, B. (2019). Ensemble of optimal trees, random forest and random projection ensemble classification. Advances in Data Analysis and Classification, 1-20.
 
 Liaw, A. and Wiener, M. (2002) ``Classification and regression by random forest'' R news. 2(3). 18--22.
 }
@@ -72,4 +72,4 @@ Zardad Khan <zkhan@essex.ac.uk>
 }
 
 \keyword{ Predict.OTReg }
-\keyword{ OptTreesEns }
+\keyword{ OTE }

@@ -1,7 +1,7 @@
 \name{OTProb}
 \alias{OTProb}
 \title{
-Train the ensemble of optimal trees for class member ship probability estimation.
+Train the ensemble of optimal trees for class membership probability estimation.
 }
 \description{
 This function selects optimal trees for class membership probability estimation from a total of \code{t.initial} trees grown by random forest. Number of trees in the initial set, \code{t.initial}, is specified by the user. If not specified then the default \code{t.initial = 1000} is used. 
@@ -41,7 +41,7 @@ Large values are recommended for \code{t.initial} for better performance as poss
 A trained object consisting of the selected trees.
 }
 \references{
-Khan, Z., Gul, A., Perperoglou, A., Mahmoud, O.,Miftahuddin, M., Adler, W. and Lausen, B.(2014) ``An ensemble of optimal trees for classification and regression'' Journal name to appear.
+Khan, Z., Gul, A., Perperoglou, A., Miftahuddin, M., Mahmoud, O., Adler, W., & Lausen, B. (2019). Ensemble of optimal trees, random forest and random projection ensemble classification. Advances in Data Analysis and Classification, 1-20.
 
 Liaw, A. and Wiener, M. (2002) ``Classification and regression by random forest'' R news. 2(3). 18--22.
 }
@@ -85,5 +85,5 @@ Prior action needs to be taken in case of missing values as the fuction can not 
   Prediction$Estimated.Probabilities
 
   }
-\keyword{OTProb}
-\keyword{OptTreesEns}
+\keyword{ OTProb }
+\keyword{ OTE }

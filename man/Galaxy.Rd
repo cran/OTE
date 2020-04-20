@@ -29,4 +29,4 @@ Buta, R. (1987), ``The Structure and Dynamics of Ringed Galaxies, III: Surface P
 data(Galaxy)
 str(Galaxy)
 }
-\keyword{datasets}
+\keyword{Galaxy}

@@ -40,10 +40,10 @@ Heinz, G., Peterson, L.J., Johnson, R.W. and Kerk, C.J. (2003), ``Exploring Rela
 
 }
 \references{
-Hurley, C. (2012), `` gclus: Clustering Graphics'', R package version 1.3.1, \url{http://CRAN.R-project.org/package=gclus}.
+Hurley, C. (2012), `` gclus: Clustering Graphics'', R package version 1.3.1, \url{https://CRAN.R-project.org/package=gclus}.
 }
 \examples{
 data(Body)
 str(Body)
 }
-\keyword{datasets}
+\keyword{Body}
